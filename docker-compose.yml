@@ -3,8 +3,8 @@ version: "3.8"
 services:
   app:
     build: .
-    environment:
-      MONGO_URL: mongodb://mongo:27017/wikiDB
+    env_file:
+      - .env
     depends_on:
       - mongo
     ports:
